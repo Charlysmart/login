@@ -11,15 +11,20 @@ body{
 }
 
 .login_left{
-    width: 50%; 
-    margin: auto;
+    max-width: 50%; 
+}
+
+.login_left .form-container{
+    margin: 0 5rem;
+    padding: 1rem 0 8rem 1rem;
+
 }
 
 .login_left .logo{
-    color: rgb(11, 133, 133);
+    color: #0b8585;
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 3em;
+    margin: 3em 0 3em 4em ;
 }
 
 .login_left h1{
@@ -74,14 +79,17 @@ body{
     margin-left: -120px;
 }
 
-.login_left .remember-container p{
-    color: rgb(11, 133, 133);
+.login_left .remember-container p,
+.button-container p span a{
+    color: #0b8585;
+    font-weight: 600;
+    
 }
 
 .login_left input[type=checkbox] {
     width: 25px;
     height: 25px;
-    background-color: rgb(11, 133, 133);
+    background-color: #0b8585;
 }
 
 .login_left .form-group{
@@ -91,12 +99,13 @@ body{
 
 .login_left button{
     width: 85%; 
-    background-color: seagreen; 
+    background-color: #0b8585; 
     border: none; 
     border-radius: 5px; 
     color: white; 
     padding: 15px; 
-    margin-bottom: 10px;
+    margin-bottom: 1.3rem;
+    font-size: 18px;
 }
 
 .login_left .google{
@@ -106,6 +115,14 @@ body{
     border: 1px solid gray;
     border-radius: 5px;
     width: 85%;
+}
+.login_left a{
+    text-decoration: none;
+}
+.login_left .google img{
+    width: 30px;
+    height: 30px;
+    margin-right: 0.4rem;
 }
 
 .login_right{
@@ -118,7 +135,6 @@ body{
     background: url(images/atlete.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* object-fit: fill; */
     background-position: center;
     height: 100%;
     width: 100%;
@@ -144,4 +160,11 @@ body{
     margin-top: 0;
 }
 
+.button-container p {
+    display: flex;
+    justify-content: center;
+}
+.button-container p span {
+    padding-left: 4px;
+}
 

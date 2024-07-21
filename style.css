@@ -5,63 +5,75 @@ body{
     background-color: #ffffff;
 }
 
-.login_container{
+.login_container,
+.signup_container{
     display: flex; 
-    /* height: 100vh; */
 }
 
-.login_left{
+.login_left,
+.signup_right{
     max-width: 50%; 
-}
-
-.login_left .form-container{
-    margin: 0 5rem;
-    padding: 1rem 0 8rem 1rem;
+    height: 100vh;
+    overflow:scroll;
 
 }
 
-.login_left .logo{
+.login_left::-webkit-scrollbar,
+.signup_right::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.login_left .form-header,
+.signup_right .form-header{
+    padding: 0 4rem ;
+    margin-bottom: 3rem;
+}
+
+.login_left .form-container,
+.signup_right .form-container{
+    padding-left:4rem ;
+}
+
+.login_left .logo,
+.signup_right .logo{
     color: #0b8585;
     font-size: 25px;
-    font-weight: 600;
-    margin: 3em 0 3em 4em ;
+    font-weight: 600; 
+    margin: 4rem 0 5rem 4rem;
 }
 
-.login_left h1{
-    margin-bottom: 5px;
+.login_left h1,
+.signup_right h1{
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
-.login_left p{
-    margin: 15px 0; 
+.login_left p,
+.signup_right p{
+    margin: 13px 0; 
     color: grey;
     font-size: 18px;
 }
 
-.login_left input[type=email]{
-    width: 80%; 
+.login_left input[type=text],
+.login_left input[type=email],
+.login_left input[type=password],
+.signup_right input[type=text],
+.signup_right input[type=email],
+.signup_right input[type=password]{
+    width: 79%; 
     background-color: white; 
     border: 1px solid lightgrey; 
     border-radius: 10px; 
     color: grey; 
-    padding: 15px; 
-    margin-bottom: 30px;
-    margin-top: 8px;
+    padding: 10px; 
+    margin-bottom: 20px;
+    margin-top: 7px;
     font-size: 18px;
 }
 
-.login_left input[type=password]{
-    width: 80%; 
-    background-color: white; 
-    border: 1px solid lightgrey; 
-    border-radius: 10px; 
-    color: grey; 
-    padding: 15px; 
-    margin-bottom: 30px;
-    margin-top: 8px;
-    font-size: 18px;
-}
-
-.login_left label{
+.login_left label,
+.signup_right label{
     font-weight: 600;
 }
 
@@ -72,11 +84,22 @@ body{
     width: 85%;
     margin-bottom: 30px;
 }
+.signup_right .terms-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 85%;
+    margin-bottom: 30px;
+}
 
 
 .login_left .check{
     font-weight: 400;
-    margin-left: -120px;
+    margin-left:-180px;
+}
+.signup_right .terms{
+    font-weight: 400;
+    margin-left: 5px;
 }
 
 .login_left .remember-container p,
@@ -86,18 +109,21 @@ body{
     
 }
 
-.login_left input[type=checkbox] {
+.login_left input[type=checkbox],
+.signup_right input[type=checkbox] {
     width: 25px;
     height: 25px;
     background-color: #0b8585;
 }
 
-.login_left .form-group{
+.login_left .form-group,
+.signup_right .form-group{
     display: flex;
     flex-direction: column;
 }
 
-.login_left button{
+.login_left button,
+.signup_right button{
     width: 85%; 
     background-color: #0b8585; 
     border: none; 
@@ -108,7 +134,8 @@ body{
     font-size: 18px;
 }
 
-.login_left .google{
+.login_left .google,
+.signup_right .google{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,23 +143,27 @@ body{
     border-radius: 5px;
     width: 85%;
 }
-.login_left a{
+.login_left a,
+.signup_right a{
     text-decoration: none;
 }
-.login_left .google img{
+.login_left .google img,
+.signup_right .google img{
     width: 30px;
     height: 30px;
     margin-right: 0.4rem;
 }
 
-.login_right{
+.login_right,
+.signup_left{
     width: 50%; 
     position: relative;
     margin: 15px;
+    height: 100vh;
 }
 
 .image-container{
-    background: url(images/atlete.jpg);
+    background: url(images/ball-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -168,3 +199,12 @@ body{
     padding-left: 4px;
 }
 
+.su-image-container{
+    background: url(images/ball-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
